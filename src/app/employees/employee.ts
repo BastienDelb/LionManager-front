@@ -6,6 +6,6 @@ export class Employee {
         public sector: string,
         public skills: string[],
         public remuneration: number,
-        public imageUrl: string
+        public imgUrl: string
     ) { }
 }

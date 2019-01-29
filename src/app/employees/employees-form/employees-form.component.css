@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+.employee-form {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.field-full-width {
+    width:100%;
+    margin: 10px 0;
+}
+
+span {
+    color:red;
+}

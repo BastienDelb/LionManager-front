@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { EmployeesListComponent } from './employees/employees-list/employees-list.component';
+import { EmployeesFormComponent } from './employees/employees-form/employees-form.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'employees', component: EmployeesListComponent },
+    { path: 'employees/add', component: EmployeesFormComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }
 ];

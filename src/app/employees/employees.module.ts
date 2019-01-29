@@ -6,9 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
+import { EmployeesFormComponent } from './employees-form/employees-form.component';
 
 @NgModule({
-  declarations: [EmployeesListComponent],
+  declarations: [EmployeesListComponent, EmployeesFormComponent],
   imports: [
     CommonModule,
     MaterialModule,

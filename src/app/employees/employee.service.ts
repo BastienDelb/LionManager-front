@@ -18,5 +18,7 @@ export class EmployeeService {
     return this.http.get<Employee>('http://localhost:8282/employees/' + id);
   }
 
-
+  post(employee: Employee): Observable<Employee> {
+    return this.http.post<Employee>('http://localhost:8282/employees', employee);
+  }
 }
