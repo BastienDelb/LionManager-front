@@ -1,0 +1,21 @@
+.title {
+    cursor: pointer;
+    font-size: 65px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+mat-toolbar {
+    width:100%;
+}
+
+.menu-item {
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.active {
+    text-decoration: underline;
+}

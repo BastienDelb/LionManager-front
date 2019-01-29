@@ -1,0 +1,19 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 100px;
+    padding-top : 121px;
+    padding: 25px;
+    display: inline-block;
+}
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }

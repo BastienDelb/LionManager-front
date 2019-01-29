@@ -1,0 +1,17 @@
+<div class="header">
+  <h2>List of employees</h2>
+  <button class="create-button" mat-raised-button color="primary" routerLink="add">Add</button>
+</div>
+<div class="employees-container">
+  <mat-card class="employee-card" *ngFor="let employee of employeesList" routerLink="details/{{employee.id}}">
+    <mat-card-header>
+      <mat-card-title>{{ employee.firstName }} {{ employee.lastName }}</mat-card-title>
+    </mat-card-header>
+    <!-- <img mat-card-image [src]="getImage(employee.imageUrl)" style="height: 290px"> -->
+    <img mat-card-image src="http://blog.springfield.k12.or.us/yolanda/files/2009/02/person-placeholder-3.png" style="height: 290px">
+    <mat-card-content>
+      <p>sector : {{ employee.sector }} <br>
+        remuneration : {{ employee.remuneration }}€</p>
+    </mat-card-content>
+  </mat-card>
+</div>
