@@ -7,9 +7,10 @@ import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
 import { EmployeesFormComponent } from './employees-form/employees-form.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 @NgModule({
-  declarations: [EmployeesListComponent, EmployeesFormComponent],
+  declarations: [EmployeesListComponent, EmployeesFormComponent, EmployeeDetailsComponent],
   imports: [
     CommonModule,
     MaterialModule,

@@ -1,12 +1,27 @@
 <div class="header">
   <h2>List of employees</h2>
-  <button class="create-button" mat-raised-button color="primary" routerLink="add">Add</button>
+  <h4>Sort by :</h4>
+  <mat-form-field>
+    <mat-select ng-model="sortorder" [(value)]="selected">
+      <mat-option value="name">Name</mat-option>
+      <mat-option value="sector">Sector</mat-option>
+      <mat-option value="salary">Salary</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- <mat-form-field>
+      <mat-select [(value)]="selected">
+        <mat-option value="name">Name</mat-option>
+        <mat-option value="sector">Sector</mat-option>
+        <mat-option value="salary">Salary</mat-option>
+      </mat-select>
+    </mat-form-field> -->
 </div>
 <div class="employees-container">
   <mat-card class="employee-card" *ngFor="let employee of employeesList" routerLink="details/{{employee.id}}">
     <mat-card-header>
       <mat-card-title>{{ employee.firstName }} {{ employee.lastName }}</mat-card-title>
     </mat-card-header>
+    <!-- <img mat-card-image [src]="employeeService.getImage(employee.imgUrl)" style="height: 290px"> -->
     <img mat-card-image [src]="getImage(employee.imgUrl)" style="height: 290px">
     <mat-card-content>
       <p>sector : {{ employee.sector }} <br>
@@ -15,3 +30,4 @@
     </mat-card-content>
   </mat-card>
 </div>
+<button class="create-button" mat-raised-button color="primary" routerLink="add">Add</button>

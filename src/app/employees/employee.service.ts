@@ -21,4 +21,12 @@ export class EmployeeService {
   post(employee: Employee): Observable<Employee> {
     return this.http.post<Employee>('http://localhost:8282/employees', employee);
   }
+
+  getImage(imgUrl) {
+    if (imgUrl !== undefined && imgUrl.length > 0) {
+      return imgUrl;
+    } else {
+      return 'http://blog.springfield.k12.or.us/yolanda/files/2009/02/person-placeholder-3.png';
+    }
+  }
 }

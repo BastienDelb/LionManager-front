@@ -1,0 +1,27 @@
+<mat-tab-group *ngIf="employee; else loading">
+  <mat-tab label="Infos">
+    <div class="infos">
+      <p class="flotte"><img mat-card-image [src]="getImage(employee.imgUrl)" style="width:300px;height:300px;"></p>
+      <div class="text">
+        <h1>{{employee.firstName}} {{employee.lastName}}</h1>
+        <p>Age : </p>
+        <p>Nationality : </p>
+        <p>Address : </p>
+        <p>Phone Number : </p>
+        <p>Mail : </p>
+        <p>Salary : </p>
+        <!-- <p>Time spent in the company : </p> -->
+        <p>Skills : </p>
+        <p>Sector : </p>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Other"> ... </mat-tab>
+</mat-tab-group>
+
+<ng-template #loading>
+  <h1 *ngIf="endRequest == true">
+      No existing profile
+  </h1>
+  <mat-spinner *ngIf="endRequest == false"></mat-spinner>
+</ng-template>

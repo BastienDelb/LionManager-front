@@ -1,0 +1,16 @@
+.flotte {
+    float:left;
+    height: 400px;
+    }
+
+.infos {
+    position: relative;
+    margin-left: 3%;
+    margin-top: 1%;
+    justify-content: center;
+}
+
+.text {
+    position: absolute;
+    margin-left: 400px;
+}

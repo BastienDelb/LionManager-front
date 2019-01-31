@@ -22,4 +22,14 @@ h2 {
 
 button{
     background: rgb(220,220,200);
+    display: block;
+    margin: auto;
+}
+
+hr {
+    display: block;
+    clear: both;
+    height: 0;
+    margin: 40px 0 80px;
+    line-height: 1;
 }

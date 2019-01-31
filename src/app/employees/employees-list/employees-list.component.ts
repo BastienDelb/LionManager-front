@@ -9,6 +9,7 @@ import { EmployeeService } from '../employee.service';
 })
 export class EmployeesListComponent implements OnInit {
 
+  selected = 'name';
   employeesList: Employee[] = new Array();
 
   constructor(private employeeService: EmployeeService) { }
