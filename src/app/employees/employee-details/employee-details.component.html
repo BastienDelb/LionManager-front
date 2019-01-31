@@ -14,6 +14,8 @@
         <p>Skills : </p>
         <p>Sector : </p>
       </div>
+      <button mat-raised-button color="primary" (click)="deleteProfile()" routerLink="/employees">Delete</button>
+      <!-- <button mat-raised-button color="primary">Modify</button> -->
     </div>
   </mat-tab>
   <mat-tab label="Other"> ... </mat-tab>
@@ -21,7 +23,7 @@
 
 <ng-template #loading>
   <h1 *ngIf="endRequest == true">
-      No existing profile
+    No existing profile
   </h1>
   <mat-spinner *ngIf="endRequest == false"></mat-spinner>
 </ng-template>

@@ -1,44 +1,50 @@
 <h1>Create new profile</h1>
-<form #seanceForm="ngForm" class="employee-form" (ngSubmit)="saveProfile()">
+<form #employeeForm="ngForm" class="employee-form">
 
   <mat-form-field class="field-full-width">
-    <input matInput placeholder="First Name" [(ngModel)]="employee.firstName" name="firstName"
-      minlength="3" required>
+    <input matInput placeholder="First Name" [(ngModel)]="employee.firstName" name="firstName" minlength="3" maxlength="20" required>
   </mat-form-field>
 
   <mat-form-field class="field-full-width">
-    <input matInput placeholder="Last Name" [(ngModel)]="employee.lastName" name="lastName"
-      minlength="3" required>
+    <input matInput placeholder="Last Name" [(ngModel)]="employee.lastName" name="lastName" minlength="3" maxlength="20" required>
   </mat-form-field>
 
   <mat-form-field class="field-full-width">
-      <input matInput type="number" placeholder="Remuneration (€/month)" [(ngModel)]="employee.remuneration" name="remuneration" required>
-    </mat-form-field>
-
-
-
-
-    <mat-form-field class="field-full-width">
-        <input matInput placeholder="Image URL" [(ngModel)]="employee.imgUrl" name="imgUrl">
-      </mat-form-field>
-  <!--
-
-  <mat-form-field class="field-full-width">
-    <input #inputDate="ngModel" matInput placeholder="Date (yyyy-mm-dd)" [(ngModel)]="seance.date" name="date" 
-    pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" required>
+    <input matInput placeholder="Nationality" [(ngModel)]="employee.nationality" name="nationality" minlength="5"
+      required>
   </mat-form-field>
 
   <mat-form-field class="field-full-width">
-    <input #inputTime="ngModel" matInput placeholder="Seance time (hh.mm)" [(ngModel)]="seance.time" name="time" required>
+    <input matInput type="number" placeholder="Age" [(ngModel)]="employee.age" name="age"
+      required>
   </mat-form-field>
 
   <mat-form-field class="field-full-width">
-    <input #inputDuration="ngModel" matInput placeholder="Movie duration (min)" [(ngModel)]="seance.duration" name="duration" required>
+    <input matInput type="text" placeholder="Number (+99999999999)" [(ngModel)]="employee.number" name="number" pattern="[\+]\d{11}"
+      required>
   </mat-form-field>
 
   <mat-form-field class="field-full-width">
-    <input matInput placeholder="Image URL" [(ngModel)]="seance.imgUrl" name="imgUrl">
-  </mat-form-field> -->
+    <input matInput type="text" placeholder="Address" [(ngModel)]="employee.address" name="address" maxlength="50"
+      required>
+  </mat-form-field>
 
-  <button [disabled]="seanceForm.status=='INVALID'" mat-raised-button color="primary">Save</button>
+  <mat-form-field class="field-full-width">
+    <input matInput type="email" placeholder="example@example.com" ngModel email [(ngModel)]="employee.mail" name="mail"
+      required>
+  </mat-form-field>
+
+  <mat-form-field class="field-full-width">
+    <input matInput type="number" placeholder="Remuneration (€/month)" [(ngModel)]="employee.remuneration" name="remuneration"
+      required>
+  </mat-form-field>
+
+
+
+
+  <mat-form-field class="field-full-width">
+    <input matInput placeholder="Image URL" [(ngModel)]="employee.imgUrl" name="imgUrl">
+  </mat-form-field>
+
+  <button [disabled]="employeeForm.status=='INVALID'" mat-raised-button color="primary" (click)="saveProfile()" routerLink="/employees">Create</button>
 </form>

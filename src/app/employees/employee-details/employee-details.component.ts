@@ -33,4 +33,8 @@ export class EmployeeDetailsComponent implements OnInit {
     }
   }
 
+  deleteProfile() {
+    this.employeeService.delete(this.employee.id);
+  }
+
 }

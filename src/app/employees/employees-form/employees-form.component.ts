@@ -13,6 +13,11 @@ export class EmployeesFormComponent implements OnInit {
     id: null,
     firstName: '',
     lastName: '',
+    nationality: '',
+    address: '',
+    age: null,
+    number: null,
+    mail: '',
     sector: '',
     skills: [''],
     remuneration: null,
@@ -25,6 +30,7 @@ export class EmployeesFormComponent implements OnInit {
   }
 
   saveProfile() {
+    console.log('save');
     this.employeeService.post(this.employee);
   }
 

@@ -19,7 +19,11 @@ export class EmployeeService {
   }
 
   post(employee: Employee): Observable<Employee> {
-    return this.http.post<Employee>('http://localhost:8282/employees', employee);
+    return this.http.post<Employee>('http://localhost:8282/employees/', employee);
+  }
+
+  delete(id: number): Observable<Employee> {
+    return this.http.delete<Employee>('http://localhost:8282/employees/' + id);
   }
 
   getImage(imgUrl) {
